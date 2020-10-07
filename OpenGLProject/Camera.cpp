@@ -9,4 +9,14 @@ Camera::Camera(GLfloat FOV, GLfloat width, GLfloat height, GLfloat nearPlane, GL
     projectionMatrix = glm::perspective(FOV, width/height, nearPlane, farPlane);
 }
 
+glm::mat4 Camera::getViewMatrix() {
+    return viewMatrix;
+}
 
+glm::mat4 Camera::getProjectionMatrix() {
+    return projectionMatrix;
+}
+
+glm::vec3 Camera::getCameraPosition() {
+    return cameraPos;
+}
